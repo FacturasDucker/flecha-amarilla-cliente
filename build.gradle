@@ -13,9 +13,25 @@ dependencies {
     implementation 'io.quarkus:quarkus-rest'
     implementation 'io.quarkus:quarkus-rest-jackson'
     implementation 'io.quarkus:quarkus-hibernate-orm-panache'
-    implementation 'io.quarkus:quarkus-jdbc-postgresql'
+    implementation 'io.quarkus:quarkus-jdbc-mariadb'
     implementation 'io.quarkus:quarkus-arc'
     implementation 'io.quarkus:quarkus-hibernate-orm'
+
+    implementation 'io.quarkus:quarkus-elytron-security-jdbc'
+
+    implementation 'io.quarkus:quarkus-smallrye-jwt'
+
+    // Añadir OpenAPI para habilitar las anotaciones @Operation y @Tag
+    implementation 'io.quarkus:quarkus-smallrye-openapi'
+
+    // Add Hibernate Validator for Jakarta Bean Validation
+    implementation 'io.quarkus:quarkus-hibernate-validator'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.32'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
+
+
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
 }
